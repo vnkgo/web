@@ -1,0 +1,16 @@
+如果我把myForm1.Text = "my Form";
+和
+myForm2.Text = "i changed it";
+的位置互换，结果会有变化吗
+
+```c#
+using WindowsForm
+Form myForm1;
+Form myForm2;
+myForm1=new Form();
+myForm2=myForm1;
+myForm1.Text="my Form";
+myForm2.Text="i changed it";
+myForm1.showDialog();
+```
+解释一下

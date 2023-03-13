@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>加入我们</title>
+    <link rel="stylesheet" href="joinUs.css" />
+  </head>
+  <body>
+    <img src="img/joinUs.png" width="100%" />
+    <form action="join.php" method="post">
+      <table class="joinUSTable" align="centet" cellpadding="8">
+        <thead>
+          <tr>
+            <th colspan="2">面试登记表</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="2">请填写你的个人信息，务必保证信息准确无误</td>
+          </tr>
+          <tr>
+            <td>真实姓名&nbsp;<sup>*</sup>：</td>
+            <td>
+              <input
+                type="text"
+                placeholder="请输入你的姓名"
+                name="name"
+                required="required"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>手机号码&nbsp;<sup>*</sup>:</td>
+            <td>
+              <input
+                type="tel"
+                placeholder="请输入你的手机号"
+                name="tel"
+                required="required"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>常用邮箱&nbsp;<sup>*</sup>:</td>
+            <td>
+              <input
+                type="email"
+                placeholder="请输入你的常用邮箱"
+                name="email"
+                required="required"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              面试岗位&nbsp;<sup><strong>*</strong></sup
+              >:
+            </td>
+            <td>
+              <input type="text" list="jobs" name="jobs" required="required" />
+              <datalist id="jobs">
+                <option value="Java工程师"></option>
+                <option value="PHP 工程师"></option>
+                <option value="前端工程师"></option>
+                <option value="C/C++工程师"></option>
+                <option value="UI 设计师"></option>
+              </datalist>
+            </td>
+          </tr>
+          <tr>
+            <td>性别：</td>
+            <td>
+              <input type="radio" id="man" name="gender" checked />
+              <label for="man">男</label>
+              <input type="radio" id="woman" name="gender" />
+              <label for="woman">女</label>
+              <img width="10" src="" />
+            </td>
+          </tr>
+          <tr>
+            <td>工作年限:</td>
+            <td>
+              <select name="exp">
+                <option value="fresh">应届生</option>
+                <option value="1to3">1-3 年</option>
+                <option value="3to5">3-5 年</option>
+                <option value="5to8">5-8 年</option>
+                <option value="8to10">8-10 年</option>
+                <option value="10more">10 年以上</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>作品上传:</td>
+            <td><input type="file" name="files" multiple /></td>
+          </tr>
+          <tr>
+            <td>常用编程语言:</td>
+            <td>
+              <label for="Java">
+                <input id="java" value="java" type="checkbox" />Java
+              </label>
+              <label for="PHP">
+                <input id="php" value="php" type="checkbox" />PHP
+              </label>
+              <label for="JS">
+                <input id="js" value="js" type="checkbox" />JavaScript
+              </label>
+              <label for="c">
+                <input id="c" value="c" type="checkbox" />c
+              </label>
+              <label for="c++">
+                <input id="c++" value="c++" type="checkbox" />c++
+              </label>
+              <label for="others">
+                <input id="others" value="others" type="checkbox" />其他
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <td>个人评价<sup>*</sup>:</td>
+            <td>
+              <textarea cols="71" rows="8" name="evaluation"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="确认提交" />
+              <input type="reset" value="重新填写" />
+            </td>
+          </tr>
+        </tfoot>
+        <tfoot>
+          <tr>
+            <td colspan="2">
+              <details>
+                <summary>面试协议</summary>
+                <p>
+                  鉴于面试者洽谈劳务合同关系，面试及相关交流中会涉及到我司的商业秘密，
+                  为了明确面试者的保密义务，有效保护我司的商业秘密，防止该商业秘密被公开披露或以任何形式泄漏，请
+                  面试者遵守《中华人民共和国劳动法》、《中华人民共和国劳动合同法》、《中华人民共和国反不正当竞争
+                  法》等有关规定，本着遵循平诚实信用的原则进行面试。
+                </p>
+              </details>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </form>
+  </body>
+</html>

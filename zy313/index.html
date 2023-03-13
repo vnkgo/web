@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        form {
+            width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            top: 50%;
+            left: 50%;
+            transform: translate(0%, 50%);
+
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .form-control label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-control input,
+        .form-control textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .form-control textarea {
+            resize: none;
+            height: 150px;
+        }
+
+        .form-control button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .form-control button:hover {
+            background-color: #555;
+        }
+
+        /*背景从灰到黑从上到下渐变色*/
+        body {
+            background: linear-gradient(to bottom, #333, #000);
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div>
+        <form action="index.php" method="post">
+            <h1>留言板</h1>
+            <div class="form-control"> <label for="name">姓名</label> <input type="text" name="name" id="name"
+                    placeholder="请输入姓名"> </div>
+            <div class="form-control"> <label for="email">邮箱</label> <input type="email" name="email" id="email"
+                    placeholder="请输入邮箱"> </div>
+            <div class="form-control"> <label for="message">留言</label> <textarea name="message" id="message"
+                    placeholder="请输入留言"></textarea> </div>
+            <div class="form-control"> <button type="submit">提交</button> </div>
+        </form>
+    </div>
+</body>
+
+</html>

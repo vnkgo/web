@@ -1,0 +1,82 @@
+.joinUSTable {
+  width: 800px;
+  border: 1px;
+}
+.joinUSTable th {
+  height: 20px;
+  background: #f0f0f0;
+  font-weight: normal;
+  text-align: left;
+}
+.joinUSTable td {
+  height: 20px;
+  color: #363636;
+}
+.joinUSTable sup {
+  color: red;
+}
+.joinUSTable tbody tr td :first-childz {
+  width: 140px;
+  text-align: right;
+}
+.joinUsTable tbody tr:first-childtd {
+  color: #f57359;
+  font-size: 18px;
+  text-align: left;
+}
+.joinUsTable tbody tr:last-childtd {
+  text-align: center;
+}
+.joinUsTable input[type="text"],
+.joinUsTable input[type="tel"],
+.joinUsTable input[type="email"] {
+  width: 530px;
+  height: 30px;
+  border: 1px solid #cbcbcb;
+}
+.joinUsTable input:focus {
+  outline: none;
+  border: 1px solid #f57359;
+}
+#man:checked ~ img {
+  content: url(img/man.png);
+  max-width: 50px;
+  max-height: 50px;
+}
+#woman:checked ~ img {
+  content: url(img/woman.png);
+  max-width: 50px;
+  max-height: 50px;
+}
+.joinUsTable select {
+  border: 1px solid #cbcbcb;
+}
+.joinUsTable input:focus,
+.joinUsTable textarea:focus {
+  outline: none;
+  border: 1px solid #f57359;
+}
+.joinUsTable textarea {
+  resize: none;
+  border: 1px solid #cbcbcb;
+}
+input[type="submit"],
+input[type="reset"] {
+  background: #f57359;
+  outline: none;
+  border: none;
+  color: white;
+  width: 100px;
+  height: 38px;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background: orangered;
+}
+.joinUsTable details summary {
+  color: #f57359;
+  outline: none;
+}
+.joinUsTable details p {
+  text-indent: 32px;
+}
