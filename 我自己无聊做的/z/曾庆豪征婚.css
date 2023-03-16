@@ -1,0 +1,22 @@
+.logo{
+    position: absolute;
+    top: 30px;
+    left: 145px;
+    width: 300px;
+    height: 300px;
+    background: url(https://th.bing.com/th/id/OIP.x6eez8t_JO88tWU7Y_-fJAHaFj?pid=ImgDet&rs=1);
+}
+a{
+    /* 去除下划线 */
+    text-decoration: none;
+}
+.block{
+    position: absolute; /* 设置导航栏元素的定位方式为绝对定位，相对于网页窗口 */
+    top: 60px; /* 设置导航栏元素距离网页顶部的距离为60px */
+    right: 145px; /*设置导航栏元素距离网页右侧的距离为145px*/
+    display: flex; /*设置导航栏元素显示方式为弹性盒子，可以自动调整子元素大小和位置*/
+    justify-content: space-between;/*设置导航栏子元素在水平方向上均匀分布*/
+    align-items: center;/*设置导航栏子元sum素在垂直方向上居中*/
+    width: 360px;
+    height: 30px;
+}
