@@ -1,22 +1,55 @@
-.logo{
+
+body {
+    padding-top: 60px;
+  }
+  
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border: 1px solid #e7e7e7;
+    background-color: #615d63;
     position: absolute;
-    top: 30px;
-    left: 145px;
-    width: 300px;
-    height: 300px;
-    background: url(https://th.bing.com/th/id/OIP.x6eez8t_JO88tWU7Y_-fJAHaFj?pid=ImgDet&rs=1);
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  h1 {
+    position: absolute;
+    top: 2%;
+    left: 0%;
+    transform: translate(50%, 50%);
+    
+  }
+
+li {
+    float: left;
+    color: #666;
+    border-right: 1px solid #bbb;
 }
-a{
-    /* 去除下划线 */
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
 }
-.block{
-    position: absolute; /* 设置导航栏元素的定位方式为绝对定位，相对于网页窗口 */
-    top: 60px; /* 设置导航栏元素距离网页顶部的距离为60px */
-    right: 145px; /*设置导航栏元素距离网页右侧的距离为145px*/
-    display: flex; /*设置导航栏元素显示方式为弹性盒子，可以自动调整子元素大小和位置*/
-    justify-content: space-between;/*设置导航栏子元素在水平方向上均匀分布*/
-    align-items: center;/*设置导航栏子元sum素在垂直方向上居中*/
-    width: 360px;
-    height: 30px;
+ 
+/*鼠标移动到选项上修改背景颜色 */
+li a:hover {
+    background-color: #111;
+}
+.active {
+    background-color: #4CAF50;
+    float: right;
 }
