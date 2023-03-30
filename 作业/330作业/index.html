@@ -7,5 +7,74 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- 广告栏 -->
+    <div class="banner">
+      <!-- input 标签列表 -->
+      <input type="radio" name="banner" id="b1" checked />
+      <input type="radio" name="banner" id="b2" />
+      <input type="radio" name="banner" id="b3" />
+      <!-- 焦点 -->
+      <div class="swiper_pagination">
+        <label for="b1"></label>
+        <label for="b2"></label>
+        <label for="b3"></label>
+      </div>
+      <!-- 广告图列表 -->
+      <ul class="swiper_wrapper fx">
+        <!-- 广告图一 -->
+        <li class="swiper_slide">
+          <section class="intro fx">
+            <!-- 图片标题 -->
+            <h1>
+              <img src="img/banner1_title.png" />
+            </h1>
+            <dl class="download">
+              <dt>点燃新时期 ICT 的灯,照亮自主成才的路！</dt>
+              <dd class="fx">
+                <a href="#" class="download_link iphone_icon" title="iphone">
+                  iphone
+                </a>
+                <a href="#" class="download_link android_icon" title="android">
+                  android
+                </a>
+                <a href="#" class="download_link imac_icon" title="imac">
+                  imac
+                </a>
+                <a href="#" class="download_link windows_icon" title="windows">
+                  windows
+                </a>
+              </dd>
+            </dl>
+            <!-- 联系我们图标 -->
+            <dl class="online">
+              <dt>联系我们</dt>
+              <dd>
+                <a href="#" title="qzone" class="contact_icon qzone"></a>
+                <a href="#" title="kaixin" class="contact_icon kaixin"></a>
+                <a href="#" title="sina" class="contact_icon sina"></a>
+              </dd>
+            </dl>
+          </section>
+          <a href="#">
+            <img class="slide_img" src="img/banner1.png" />
+          </a>
+        </li>
+
+        <!-- 广告图二 -->
+        <li class="swiper_slide">
+          <a href="#">
+            <img class="slide_img" src="img/banner2.png" />
+          </a>
+        </li>
+
+        <!-- 广告图三 -->
+        <li class="swiper_slide">
+          <a href="#">
+            <img class="slide_img" src="img/banner3.png" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>
