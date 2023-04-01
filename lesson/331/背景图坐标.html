@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 1000px;
+        height: 1000px;
+
+        background-image: url(img/1-2102230UG45F.png);
+        background-repeat: no-repeat;
+        /* no-repeat | repeat | repeat-x | repeat-y | space | round | initial | inherit */
+        /*对应的中文意识是：不重复 | 重复 | 横向重复 | 纵向重复 | 空格 | 圆 | 初始 | 继承*/
+
+        background-position: 100px; /* x轴 y轴 */
+        /*如果只定义一个值，那该数值一定是x坐标，另一个默认垂直居中*/
+        /*混合单位 例如 100px 100px | 100px 50% | 50% 100px | 50% 50%
+        | 100px top | 100px bottom | left 100px | right 100px |
+        left top | left bottom | right top | right bottom |
+        center top | center bottom | left center | right center |
+         center center | initial | inherit */
+
+        background-attachment: fixed; /*fixed | scroll | local | initial | inherit*/
+        /*fixed：背景图固定不动，滚动条滚动时背景图不动
+            scroll：背景图跟着滚动条滚动
+            local：背景图跟着滚动条滚动，但是只有在当前元素的可视区域内才会显示
+            initial：默认值
+            inherit：继承父元素的属性值*/
+
+        /*background：background-color background-image background-repeat background-attachment background-position|initial|inherit*/
+        /* background: black url(img/sticker.webp) no-repeat fixed center top; /* background: 背景颜色 背景图 背景图重复方式 背景图固定方式 背景图位置; */
+        background: rgba(red, green, blue, alpha);
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
