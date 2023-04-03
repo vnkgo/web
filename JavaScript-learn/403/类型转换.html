@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*隐式类型转换*/
+      /*+号两边只要有一个是字符串，那么就会把另一个转换成字符串*/
+      /*-号两边如果有一个是字符串，那么就会把另一个转换成数字*/
+      console.log(1 + 1);
+      console.log("2" - 1);
+      console.log("2" + 1);
+      console.log("pink" - 1);
+      console.log("pink" - "1");
+      console.log(2 - "2"); //0
+      console.log(+123); //转换为数字型123
+
+      /*显式类型转换*/
+      let str = "12";
+      Number(str);
+      console.log(Number(str));
+      console.log(typeof Number(str));
+      console.log(Number("pink")); //NaN
+      //---------------------------
+
+      console.log(parseInt("12.3")); //12   只取整数部分
+      console.log(parseInt("pink")); //NaN
+      console.log(parseInt("12px")); //12
+      console.log(parseInt("12.3px")); //12
+      console.log(parseInt("12.3.4")); //12
+
+      //---------------------------
+      console.log(parseFloat("abv12.34px")); //NaN 开头不是数字，返回NaN
+
+      //---------------------------
+      console.log(parseFloat("12.3.4")); //12.3 取整数和小数部分
+      console.log(parseFloat("12.3px")); //12.3
+
+      console.log(parseFloat("12.3")); //12.3  取整数和小数部分
+    </script>
+  </body>
+</html>
