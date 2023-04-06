@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //前置自增
+      //   let num = 1;
+      //   ++num;
+
+      //后置自增
+      //   let num = 1;
+      //   num++;
+
+      //单独使用没区别，
+
+      let i = 1;
+      console.log(++i + 2); //4
+      //注意：++i和i++的区别在于，++i是先自增再运算，i++是先运算再自增
+      //注意i=2
+      //i先自加1，变成2之后，在和后面的2相加，结果是4
+
+      let a = 1;
+      console.log(a++ + 2); //3
+      //此时的a是1
+      //先和2相加，先运算输出完毕后，i再自加1，变成2
+    </script>
+  </body>
+</html>

@@ -1,5 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 .banner {
-  width: 32;
+  width: 100%;
   min-width: 1000px;
   margin: auto;
   overflow: hidden;
@@ -19,7 +23,7 @@
 }
 .slide_img {
   width: 100%;
-  /* å°† img å…ƒç´ è®¾ç½®ä¸º display: blockï¼Œç”¨ä»¥åŽ»é™¤ display:inline-block å…ƒç´ çš„é—´éš™ */
+  /* 将 img 元素设置为 display: block，用以去除 display:inline-block 元素的间隙 */
   display: block;
 }
 .fx {
@@ -40,7 +44,7 @@ a.download_link {
   text-align: center;
   background: url(img/icon.png) no-repeat;
   background-color: rgba(255, 255, 255, 0.85);
-  padding-top: 70px;
+  /* padding-top: 70px; */
 }
 a.download_link:hover {
   background-color: #fff;
@@ -131,4 +135,52 @@ input[name="banner"] {
 }
 a {
   text-decoration: none;
+}
+.daohang {
+  list-style: none;
+  display: inline-block;
+}
+.daohang li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+.daohanglan {
+  background-color: rgb(24, 24, 65);
+  text-align: center;
+}
+.daohang a {
+  color: #fff;
+}
+.daohang li:hover {
+  background-color: rgb(131, 206, 18);
+}
+.act {
+  background-color: rgb(134, 179, 67);
+}
+.link {
+  width: 600px;
+  display: inline-block;
+}
+.daohanglogo {
+  padding-top: 2px;
+  display: inline-block;
+}
+.daohanglan span {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+button {
+  display: inline-block;
+}
+.daohanglan_logo {
+  display: inline-block;
+}
+.tell {
+  background-color: greenyellow;
+  display: inline-block;
+  border-radius: 10px;
+  height: 20px;
+  width: 100px;
+  color: #2a2a2a;
 }
