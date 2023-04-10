@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+      }
+
+      .clearfix {
+        *zoom: 1;
+      }
+      .box {
+        width: 200px;
+        background-color: chocolate;
+
+        border: 1px solid red;
+      }
+
+      .first {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        float: left;
+      }
+
+      .second {
+        width: 100px;
+        height: 100px;
+        background-color: antiquewhite;
+        float: left;
+      }
+
+      .fd {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box clearfix">
+      <div class="first"></div>
+      <div class="second"></div>
+
+      <!-- 清除浮动 -->
+      <!--隔墙法-->
+
+      <!-- <div class="fd"></div> -->
+    </div>
+  </body>
+</html>

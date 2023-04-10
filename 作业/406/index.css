@@ -1,41 +1,50 @@
 * {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
+
 .banner {
   width: 100%;
   min-width: 1000px;
   margin: auto;
   overflow: hidden;
 }
+
 .swiper_wrapper {
   width: 300%;
 }
+
 .swiper_slide {
   width: 33.33%;
   float: left;
   position: relative;
 }
+
 .intro {
   position: absolute;
   left: 46%;
   top: 18%;
 }
+
 .slide_img {
   width: 100%;
   /* 将 img 元素设置为 display: block，用以去除 display:inline-block 元素的间隙 */
   display: block;
 }
+
 .fx {
   clear: both;
 }
+
 ul {
   list-style: none;
 }
+
 .download dt {
   color: white;
   line-height: 48px;
 }
+
 a.download_link {
   display: block;
   float: left;
@@ -46,23 +55,29 @@ a.download_link {
   background-color: rgba(255, 255, 255, 0.85);
   /* padding-top: 70px; */
 }
+
 a.download_link:hover {
   background-color: #fff;
 }
+
 a.iphone_icon {
   border-radius: 5px 0 0 5px;
   background-position: 26px 22px;
 }
+
 a.android_icon {
   background-position: 26px -76px;
 }
+
 a.imac_icon {
   background-position: 26px -273px;
 }
+
 a.windows_icon {
   border-radius: 0 5px 5px 0px;
   background-position: 26px -378px;
 }
+
 .online {
   width: 115px;
   cursor: pointer;
@@ -71,24 +86,29 @@ a.windows_icon {
   top: -2px;
   left: 345px;
 }
+
 .online dt {
   height: 37px;
   padding-left: 17px;
   line-height: 37px;
   background: url(img/online.png) no-repeat;
 }
+
 .online dd {
   display: none;
   padding: 2px 0 8px 13px;
   background-color: #fff;
   border-radius: 0 0 15px 15px;
 }
+
 .online:hover dt {
   background-position: -120px 0;
 }
+
 .online:hover dd {
   display: block;
 }
+
 a.contact_icon {
   display: inline-block;
   width: 24px;
@@ -97,21 +117,27 @@ a.contact_icon {
   background: url(img/online.png) no-repeat;
   margin-right: 4px;
 }
+
 a.qzone {
   background-position: -25px -47px;
 }
+
 a.kaixin {
   background-position: -50px -47px;
 }
+
 a.sina {
   background-position: -100px -47px;
 }
+
 .banner {
   position: relative;
 }
+
 input[name="banner"] {
   display: none;
 }
+
 .swiper_pagination {
   position: absolute;
   z-index: 999;
@@ -119,6 +145,7 @@ input[name="banner"] {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .swiper_pagination label {
   cursor: pointer;
   display: block;
@@ -130,57 +157,123 @@ input[name="banner"] {
   opacity: 0.5;
   margin-right: 15px;
 }
+
 .swiper_pagination label:last-child {
   margin-right: 0;
 }
+
 a {
   text-decoration: none;
 }
+
 .daohang {
   list-style: none;
   display: inline-block;
 }
+
 .daohang li {
   display: inline-block;
   padding: 10px 20px;
 }
+
 .daohanglan {
   background-color: rgb(24, 24, 65);
   text-align: center;
 }
+
 .daohang a {
   color: #fff;
 }
+
 .daohang li:hover {
   background-color: rgb(131, 206, 18);
 }
+
 .act {
   background-color: rgb(134, 179, 67);
 }
+
 .link {
   width: 600px;
   display: inline-block;
 }
+
 .daohanglogo {
   padding-top: 2px;
   display: inline-block;
 }
+
 .daohanglan span {
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
+
 button {
   display: inline-block;
 }
+
 .daohanglan_logo {
   display: inline-block;
 }
+
 .tell {
-  background-color: greenyellow;
+  background-color: rgb(144, 199, 61);
   display: inline-block;
   border-radius: 10px;
   height: 20px;
   width: 100px;
-  color: #2a2a2a;
+  color: #ffffff;
+}
+
+.under {
+  height: 100px;
+  background-color: rgb(24, 24, 65);
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 150px;
+
+  z-index: 9999;
+  text-align: center;
+}
+
+.under p {
+  color: rgb(119, 119, 119);
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.under a {
+  color: rgb(117, 117, 117);
+  padding: 5px;
+}
+
+.amidst {
+  text-align: center;
+}
+
+.first,
+.second,
+.third,
+.four {
+  width: 200px;
+  height: 200px;
+
+  background-color: #ccc;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.first {
+}
+
+.second {
+}
+
+.third {
+}
+
+.four {
 }

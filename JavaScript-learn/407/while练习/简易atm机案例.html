@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      while (true) {
+        let money = 0;
+        let op = +prompt("选择\n1.存钱\n2.取钱\n3.查看余额\n4.退出");
+        if (op === 4) {
+          break;
+        }
+        switch (op) {
+          case 1:
+            let new_money = +prompt("存多少");
+
+            alert(`新增${new_money},当前余额为${new_money + money}`);
+            money += new_money;
+            break;
+          case 2:
+            let out_money = +prompt("取多少");
+            while (out_money > money) {
+              //如果取款金额大于余额，提示用户并让用户重新输入
+              alert(`余额不足，当前余额为${money}`);
+              out_money = +prompt("取多少");
+            }
+            alert(`取款${out_money},当前余额${money - out_money}`);
+            money = money - out_money;
+            break;
+          case 3:
+            alert(`${money}`);
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

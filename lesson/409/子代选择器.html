@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>复合选择器之子元素选择器</title>
+    <style>
+      .nav > a {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <a href="#">我是儿子1</a>
+      <p>
+        <a href="#">我是孙子1</a>
+        <a href="#">我是孙子2</a>
+      </p>
+      <a href="#">我是儿子2</a>
+    </div>
+  </body>
+</html>
