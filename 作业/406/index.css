@@ -36,6 +36,15 @@
   clear: both;
 }
 
+.clearfix::before，.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
 ul {
   list-style: none;
 }
@@ -258,22 +267,32 @@ button {
 .second,
 .third,
 .four {
-  width: 200px;
-  height: 200px;
+  width: 356px;
+  height: 250px;
+  margin: 20px;
 
-  background-color: #ccc;
   display: inline-block;
+  vertical-align: top;
+}
+
+.amidst p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.amidst a {
+  color: rgb(34, 141, 105);
+}
+
+.amidst_news {
+  width: 1600px;
   margin: 0 auto;
 }
 
-.first {
-}
-
-.second {
-}
-
-.third {
-}
-
-.four {
+.news_left,
+.news_right {
+  float: left;
+  width: 800px;
+  height: 400px;
+  background-color: #ccc;
 }
