@@ -1,0 +1,293 @@
+body {
+	font-size: calc(14*100vw/375);
+}
+
+
+.header_bar {
+	width: 102%;
+	height: calc(50*100vw/375);
+	padding: calc(18*100vw/375);
+	background: #191d3a;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	width: calc(87*100vw/375);
+	height: calc(16*100vw/375);
+}
+
+.logo>img {
+	width: 100%;
+}
+
+.navList {
+	width: calc(20*100vw/375);
+	height: calc(17*100vw/375);
+}
+
+.navList>img {
+	width: 100%;
+}
+
+
+
+.banner {
+	width: 100%;
+	min-width: 375px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.swiper_wrapper {
+	width: 300%;
+}
+
+.swiper_slide {
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+
+.slide_img {
+	width: 100%;
+	display: block;
+}
+
+input[name=banner] {
+	display: none;
+}
+
+.swiper_pagination {
+	position: absolute;
+	bottom: calc(10*100vw/375);
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.swiper_pagination label {
+	cursor: pointer;
+	display: block;
+	width: calc(12*100vw/375);
+	height: calc(12*100vw/375);
+	float: left;
+	background-color: #fff;
+	border-radius: 50%;
+	opacity: 0.5;
+	margin-right: calc(15*100vw/375);
+}
+
+.swiper_pagination label:last-child {
+	margin-right: 0;
+}
+
+#b1:checked~.swiper_pagination label:first-child {
+	opacity: 1;
+}
+
+#b2:checked~.swiper_pagination label:nth-child(2) {
+	opacity: 1;
+}
+
+#b3:checked~.swiper_pagination label:last-child {
+	opacity: 1;
+}
+
+.swiper_wrapper {
+	transition: margin-left 0.4s;
+}
+
+#b1:checked~.swiper_container .swiper_wrapper {
+	margin-left: 0%;
+}
+
+#b2:checked~.swiper_container .swiper_wrapper {
+	margin-left: -100%;
+}
+
+#b3:checked~.swiper_container .swiper_wrapper {
+	margin-left: -200%;
+}
+
+.light {
+	position: absolute;
+	width: calc(60*100vw/375);
+	height: calc(800*100vw/375);
+	background: white;
+	z-index: 999;
+	opacity: 0.4;
+	filter: blur(10px);
+	transform: rotate(15deg);
+	top: -200px;
+	animation: light_move 10.7s linear infinite;
+
+}
+
+@keyframes light_move {
+	0% {
+		left: 0;
+	}
+
+	10% {
+		left: 2000px;
+	}
+
+	100% {
+		left: 2000px;
+	}
+}
+
+
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+nav ul li {
+	width: 33.33%;
+	text-align: center;
+	margin-top: calc(30*100vw/375);
+}
+
+nav ul li p {
+	margin-top: calc(8*100vw/375);
+}
+
+
+
+main {
+	width: 100%;
+	margin: auto;
+}
+
+.content {
+	width: 100%;
+}
+
+
+.news,.recruitment {
+	width: 100%;
+	overflow: hidden;
+	height: calc(310*100vw/375);
+}
+
+.con_header {
+	width: 100%;
+	height: calc(65*100vw/375);
+	padding: calc(15*100vw/375);
+	background: url(../img/newsbg.png) no-repeat;
+	background-size: cover;
+}
+
+.icon {
+	width: calc(30*100vw/375);
+	height: calc(30*100vw/375);
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.con_header h1 {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 calc(25*100vw/375) 0 calc(5*100vw/375);
+}
+
+.more_btn {
+	display: inline-block;
+	width: calc(64*100vw/375);
+	text-align: center;
+	height: calc(24*100vw/375);
+	border-radius: calc(8*100vw/375);
+	color: #30bd74;
+	border: 1px solid #38b774;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.more_btn sup {
+	font-size: calc(12*100vw/375);
+	line-height: 0;
+}
+
+.content ul {
+	list-style: none;
+	padding: 0 calc(12*100vw/375);
+}
+
+.content ul li {
+	border-bottom: 1px solid #dbe1e7;
+	padding: calc(10*100vw/375) 0;
+	line-height: calc(28*100vw/375);
+}
+
+.content ul li a {
+	display: inline-block;
+	width: 75%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+.content ul li span {
+	float: right;
+}
+
+.recruitment {
+	position: relative;
+}
+
+.recruitment article {
+	position: absolute;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	background: rgba(59, 192, 122, 0.85);
+}
+
+.recruitment video {
+	position: absolute;
+	z-index: 900;
+	width: 120%;
+	filter: brightness(80%) blur(2px);
+}
+
+.recruitment .con_header {
+	background: none;
+}
+
+
+
+.recruitment .con_header h1,.recruitment ul li a,.recruitment ul li span {
+	color: white;
+}
+
+.recruitment .more_btn {
+	color: white;
+	border: 1px solid white;
+}
+
+.recruitment ul li:last-child {
+	border: none;
+}
+
+.mt {
+	margin-top: calc(30*100vw/375);
+}
+
+
+
+footer {
+	background: #191d3a;
+	padding: calc(18*100vw/375) calc(8*100vw/375);
+	width: 100%;
+	color: #6C6E7E;
+	text-align: center;
+	font-size: calc(12*100vw/375);
+	line-height: 2;
+}

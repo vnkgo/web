@@ -32,11 +32,8 @@
   display: block;
 }
 
-.fx {
-  clear: both;
-}
-
-.clearfix::before，.clearfix::after {
+.clearfix::before,
+.clearfix::after {
   content: "";
   display: table;
 }
@@ -287,6 +284,7 @@ button {
 .amidst_news {
   width: 1600px;
   margin: 0 auto;
+  border: red 1px solid;
 }
 
 .news_left,
