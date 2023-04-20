@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+ <head>
+
+ <meta charset="UTF-8">
+
+ <title>随机点名生成</title>
+
+ <style>
+
+ /* 页面css样式 */
+
+ .wrapper {
+
+ width: 800px;
+
+ margin: 60px auto;
+
+ border: 1px solid #ddd;
+
+ text-align: center;
+
+ }
+
+
+
+ .box li {
+
+ /* 这里是学生的名字，补充相应的CSS代码 */
+list-style: none;
+display: inline-block;
+border: #333 solid 1px;
+margin: 10px;
+ }
+
+
+
+ .wrapper button {
+
+ border: none;
+
+ width: 100px;
+
+ height: 50px;
+
+ border-radius: 10px;
+
+ cursor: pointer;
+
+ outline: none;
+
+ margin-top: 20px;
+
+ font-weight: bolder;
+
+ color: #333;
+
+ background-color: rgb(14, 146, 43);
+
+ }
+
+
+
+ .wrapper button {
+
+ display: inline-block;
+
+ }
+
+
+
+ body {
+
+ background-color: #eee;
+
+ }
+
+ </style>
+
+ </head>
+
+ <body>
+
+ <div class="wrapper">
+
+ <h1 aligan="center">随机点名系统</h2>
+
+ <h6 id="data" aligan="right"></h6>
+
+ <ul class="box"></ul>
+
+ <input type=radio id='class_e' name='classname' onclick="showStu()" />E班
+
+ <input type=radio id='class_b' name='classname' onclick="showStu()" checked />B班
+
+ <input type="radio" id='class_c' name="classname" onclick="showStu()">C班
+
+ <button class="start">开始</button>
+
+ <button class="stop">停止</button>
+
+ </div>
+
+ </body>
+
+ <script>
+
+ //定义全局变量方便引用
+
+ var boxUl = document.getElementsByClassName('box')[0];
+
+ var start = document.getElementsByClassName('start')[0];
+
+ var stop = document.getElementsByClassName('stop')[0]
+
+ var oLi = document.getElementsByTagName('li');
+
+ //数据准备
+
+ var nameString = "";
+
+ var nameString_e = new String(
+
+ "陈润东,叶志伟,汤紫琪,覃彩儿,邝咏婷,邝颖嘉,胡晓盈,钟紫姗,夏宏伟,李铭贤,张嘉俊,颜乔枫,张炽鹏,冯嘉豪,刘冠辉,江乾瑜,梁德俊,刘泽涛,黄俊宇,唐康明,陈俊宇,冯嘉镇,陈嘉铭,梁梓熙,董俊濠,罗梓瑶,林羽希,钟鸿,袁康杰,赵乐,龚焌言,岑伟豪,陈锦壕,王楠,丁晓廷,王杰彬,王梓韩,刘奕煌,张鑫,陈俊锋,陈烨挺,陈嘉恩,林泽铭,林捷煜,翁培鑫,刘晓权,曾程晓,詹义凯"
+
+ );
+
+
+
+ var nameString_b = new String(
+
+ "蔡伟湛,范氏杰,梁广聪,全佩琳,李春玉,张佳泽,王鸿章,陈鹏升,刘露露,彭柏林,林昌平,傅炜峰,王伟金,蔡仁凯,江春林,杨顺兴,陈子婧,谢学丰,何健豪,陈伟韬,陈全焕,陈俊良,陈加基,陈志杰,林浩贤,李志杰,彭国佳,吴泰芝,范永豪,李松霖,邓运聪,朱世樑,黄文海,黎俊艺,莫松达,植智欣,黎钊明,徐仲毅,杜少远,黄建坤,吴怡庆,李炽南,曾庆豪,吴腾达,刘伟鑫,陈晓彬,郑思涛"
+
+ );
+
+ var nameString_c = new String(['黄欢婷','连楚耀','马伟鑫','马浩鑫','陈沛丹','陈泓宇','谢裕聪','梁倚银','陈梓豪','吴嘉鸿','许全鑫','林幸蓉','冯国富','曾晓彤','谭炜欣','陈鑫','区芷君','陈舒欣','钟振杰','付鹏','卢健乐','廖家俊','陈世宁','赖泽弘','周平','李赞财','侯启杰','董志昊','谢盛平','池达辉','朱志恒','卢晓彬','高宇豪','黄宗佑','梁心汝','吴华蓉','施沛兵','潘英雪','李丽萍','吴沛铬','林展升','陈嘉豪','张俊彬','戴耿坤','林思微','谢洁斌','程文龙']);
+
+ function showStu() {
+
+ var class_e = document.getElementById('class_e');
+
+ var class_b = document.getElementById('class_b');
+
+ var class_c=document.getElementById('class_c')
+
+ if (class_e.checked) {
+
+ nameArr = nameString_e.split(",");
+
+ } else if (class_b.checked) {
+
+ nameArr = nameString_b.split(",");
+
+ }
+
+ else if(class_c.checked){
+    nameArr = nameString_c.split(",");
+
+ }
+
+ console.log(nameArr);
+
+ //获取每个学生姓名添加到标签中，自动解析html标签
+
+ var str = "";
+
+ for (let i = 0; i < nameArr.length; i++) {
+
+ /*nameArr 是一个装满名字的数组，逐个取出，生成li*/
+str+="<li>"+nameArr[i]+"<li/>"
+ }
+
+ //把li放进ul里面
+
+ boxUl.innerHTML = str;
+
+ }
+
+ //添加开始按钮的点击事件
+
+ var timer = null;
+
+ start.onclick = function() {
+
+ // 设置定时器
+
+ timer = setInterval(function() {
+
+ // 根据数组长度范围生成随机数
+
+ var i = Math.floor(Math.random() * nameArr.length);
+
+ // 先通过for循环清空所有style属性
+
+ for (var j = 0; j < oLi.length; j++) {
+
+ oLi[j].removeAttribute("style");
+
+ }
+
+ // 为随机选择的li颜色属性
+
+ oLi[i].style.background = "red";
+
+ }, 150);
+
+ };
+
+ // 点击停止
+
+ stop.onclick = function() {
+
+ // 清空定时器停止点名
+
+ clearInterval(timer);
+
+ }
+
+ //页面初始化时间设置
+
+ window.onload  = function() {
+
+ showStu();//页面加载时，默认显示B班的所有学生
+
+ datatime();
+
+ }
+
+ //页面时间动态刷新
+
+ setInterval(datatime, 1000);
+
+
+
+ function datatime() {
+
+ let data = new Date();
+
+ let dataString = "现在是北京时间：" + data.toLocaleString();
+
+ document.getElementById("data").innerHTML = dataString;
+
+ }
+
+ </script>
+
+</html>
+
