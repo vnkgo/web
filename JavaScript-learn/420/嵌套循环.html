@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      for (let i = 1; i <= 3; i++) {
+        //外
+        document.write(`第${i}天<br/>`);
+        for (let d = 1; d <= 5; d++) {
+          //内
+          document.write(`第${d}单词<br/>`);
+        }
+      }
+
+      //内循环执行外才会执行外
+    </script>
+  </body>
+</html>
