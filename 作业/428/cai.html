@@ -1,0 +1,96 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>猜数字</title>
+    <style>
+      body {
+        background-color: #ccc;
+        color: #fff;
+        font-family: "Helvetica Neue", sans-serif;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      h1 {
+        margin-top: 50px;
+        font-size: 36px;
+        text-transform: uppercase;
+      }
+
+      input[type="number"] {
+        padding: 10px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      button {
+        background: linear-gradient(to bottom, #2980b9, #fff);
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 30px;
+        font-size: 20px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: green;
+      }
+
+      #result-message {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>猜猜数字</h1>
+    <input
+      type="number"
+      id="guess-input"
+      placeholder="输入 0 到 10 之间的数字"
+    />
+    <button id="submit-guess">猜</button>
+    <p id="result-message"></p>
+
+    <script>
+      const secretNumber = Math.floor(Math.random() * 10) + 0;
+      const guessInput = document.getElementById("guess-input");
+      const submitButton = document.getElementById("submit-guess");
+      const resultMessage = document.getElementById("result-message");
+
+      submitButton.addEventListener("click", () => {
+        const guess = parseInt(guessInput.value);
+        if (isNaN(guess) || guess < 0 || guess > 10) {
+          resultMessage.textContent = "请输入有效号码！!";
+          resultMessage.style.color = "red";
+        } else if (guess === secretNumber) {
+          resultMessage.textContent = `恭喜！ 你猜对了数字Congratulations! You guessed the number ${secretNumber}!`;
+          resultMessage.style.color = "green";
+        } else {
+          const diff = Math.abs(secretNumber - guess);
+          let message = "";
+          if (diff <= 5) {
+            message = "太小了!";
+          } else if (diff <= 10) {
+            message = "太大了!";
+          } else {
+            message = "太大了!";
+          }
+          resultMessage.textContent = `${message} You are ${
+            guess < secretNumber ? "too low" : "too high"
+          }.`;
+          resultMessage.style.color = "orange";
+        }
+        guessInput.value = "";
+      });
+    </script>
+  </body>
+</html>
