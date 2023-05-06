@@ -1,0 +1,167 @@
+
+<!DOCTYPE html
+
+ PUBLIC "-//W3C//h2D XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/h2D/xhtml1-transitional.h2d">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+ <head>
+
+ <title>超酷数码钟表</title>
+
+ <style>
+
+ h1{
+
+ text-align: center;
+
+ }
+
+ #d,
+
+ #h,
+
+ #m,
+
+ #s {
+
+ width: 100px;
+
+ height: 100px;
+
+ border: 1px solid #3bd6bf;
+
+ margin-left: 8px;
+
+ line-height: 100px;
+
+ text-align: center;
+
+ color: #ffff00;
+
+ font-size: 2em;
+
+ font-weight: bolder;
+
+ float: left;
+
+ background-color: #3bd6bf; 
+
+ box-sizing: border-box;
+
+ }
+
+
+
+ .double11 {
+
+ margin: 200px auto;
+
+ border: 1px solid #3bd6bf;
+
+ height: 200px;
+
+ width: 440px;
+
+ box-sizing: border-box;
+
+ }
+
+ </style>
+
+ </head> 
+
+ <body>
+
+ <div class="double11">
+
+ <h1>距离2023年11月11日，还有</h1>
+
+ <div class="box"></div>
+
+ <div id="d"></div><!-- 剩余的天数 -->
+
+ <div id="h"></div><!-- 剩余的小时 -->
+
+ <div id="m"></div> <!-- 剩余的分钟 -->
+
+ <div id="s"></div> <!-- 剩余的秒数 -->
+
+ </div>
+
+ </div>
+
+ </body>
+
+ <script type="text/javascript">
+
+ // 设置秒杀结束时间
+
+ var endTime = new Date('2023-11-10 24:00:00'),
+
+ endSeconds = endTime.getTime();
+
+ // 定义变量保存剩余的时间
+
+ var d = h = m = s = 0;
+
+ var dDiv = document.getElementById('d');
+
+ var hDiv = document.getElementById('h');
+
+ var mDiv = document.getElementById('m');
+
+ var sDiv = document.getElementById('s');
+
+ // 设置定时器，实现限时秒杀效果
+
+ var id = setInterval(seckill, 1000);
+
+
+
+ function seckill() {
+
+ var nowTime = new Date(); // 获取当前时间
+
+ // 获取时间差，单位为秒
+
+ var remaining = parseInt((endSeconds - nowTime.getTime()) / 1000);
+
+ if (remaining > 0) { // 判断秒杀是否过期
+
+ // 计算剩余天数（除以60*60*24取整，获取剩余的天数）
+
+ d = parseInt(remaining / 86400);
+
+ // 计算剩余小时（除以60*60转换为小时，与24取模，获取剩余的小时）
+
+ h = parseInt((remaining / 3600) % 24);
+
+ // 计算剩余分钟（除以60转为分钟，与60取模，获取剩余的分钟）
+
+ m = parseInt((remaining / 60) % 60);
+
+ // 计算剩余秒（与60取模，获取剩余的秒数）
+
+ s = parseInt(remaining % 60);
+
+ } else {
+
+ clearInterval(id); // 秒杀过期，取消定时器
+
+ }
+
+ // 统一利用两位数表示剩余的天、小时、分钟、秒，显示到指定位置
+
+ 
+
+ 
+
+dDiv.innerHTML = fillZero(d); hDiv.innerHTML = fillZero(h); mDiv.innerHTML = fillZero(m); sDiv.innerHTML = fillZero(s);
+ 
+
+ }
+
+ </script>
+
+</html>
