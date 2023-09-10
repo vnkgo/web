@@ -1,63 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>缘分计算器</title>
-    <meta charset="utf-8" />
-    <script src="css/new_file.js"></script>
-    <script>
-      function check() {
-        var boy = document.getElementById("boy");
-        var girl = document.getElementById("girl");
-        var result = document.getElementById("result");
-        result.innerHTML = "";
-        var boyCName = document.getElementById("boyName");
-        var boyName = py(boyCName.value).toLowerCase();
-        console.log(boyName);
-        var girlCName = document.getElementById("girlName");
-        var girlName = py(girlCName.value).toLowerCase();
-        console.log(girlName);
-        var i,
-          j,
-          ppd = 0;
-        for (i = 0; i < boyName.length; i++) {
-          for (j = 0; j < girlName.length; j++) {
-            if (boyName[i] == girlName[j]) {
-              result.innerHTML += "❤";
-              console.log("ppd:" + ppd);
-            }
+<head>
+  <meta charset="UTF-8">
+  <title>缘分计算器</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      text-align: center;
+      margin-top: 0;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #3e8e41;
+    }
+    #result {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>缘分计算器</h1>
+    <label for="boyName">请输入男生姓名：</label>
+    <input type="text" id="boyName">
+    <label for="girlName">请输入女生姓名：</label>
+    <input type="text" id="girlName">
+    <button onclick="calculate()">计算缘分值</button>
+    <div id="result"></div>
+  </div>
+  <script>
+    function calculate() {
+      var boyName = document.getElementById("boyName").value;
+      var girlName = document.getElementById("girlName").value;
+      var count = 0;
+      for (var i = 0; i < boyName.length; i++) {
+        for (var j = 0; j < girlName.length; j++) {
+          if (boyName[i] === girlName[j]) {
+            count++;
           }
         }
-        boy.innerHTML = boyName;
-        girl.innerHTML = girlName;
       }
-    </script>
-    <style>
-      .botton {
-        margin: 0 auto;
-        text-align: center;
-        height: 50px;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="botton">
-      <h1>缘分计算器</h1>
-      <input type="text" id="boyName" />
-
-      <button onclick="check()">匹配</button>
-
-      <input type="text" id="girlName" />
-
-      <div>
-        <span id="boy"></span>
-        <span id="girl"></span>
-      </div>
-
-      <div>
-        <label>缘分值：</label>
-        <span id="result"></span>
-      </div>
-    </div>
-  </body>
+      var result = document.getElementById("result");
+      result.innerHTML = "缘分值：" + count + " 颗星";
+    }
+  </script>
+</body>
 </html>
